@@ -37,7 +37,7 @@ int colunaOrigem = -1;
 
 int init_graficos() {
 	if(SDL_Init(SDL_INIT_EVERYTHING) >= 0) {
-		printf("\n Inicializou o SDL ... ");
+		//printf("\n Inicializou o SDL ... ");
 		window = SDL_CreateWindow("X A D R E Z - RIVA && ACSA", 50, 50, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
 		if(window != NULL) {
 			render = SDL_CreateRenderer(window, -1, 0);
@@ -57,11 +57,11 @@ int init_graficos() {
 int init_imagens() {
     if(IMG_Init(IMG_INIT_PNG) == IMG_INIT_PNG) {
         int i;
-        printf(" Carregando imagens .... \n");
+        //printf(" Carregando imagens .... \n");
         for(i = 0; i < TOTAL_PECAS; i++){
             char nomeImg[50] = "imagens/";
             strcat(nomeImg, nomesImagens[i]);
-            printf(" Imagem :%s \n", nomeImg);
+            //printf(" Imagem :%s \n", nomeImg);
             SDL_Surface * surImage = IMG_Load(nomeImg);
             imagens[i] = SDL_CreateTextureFromSurface(render, surImage);
         }
