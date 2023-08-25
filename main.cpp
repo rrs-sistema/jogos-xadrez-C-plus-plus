@@ -42,7 +42,7 @@ int colunaOrigem = -1; // Quarda o valor da coluna de origem quando foi clicada 
 int init_graficos() {
 	if(SDL_Init(SDL_INIT_EVERYTHING) >= 0) {
 		//printf("\n Inicializou o SDL ... ");
-		window = SDL_CreateWindow("X A D R E Z - UNICESUMAR - ACSA&RIVA", 50, 50, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
+		window = SDL_CreateWindow("X A D R E Z - UNICESUMAR - Acsa & Rivaldo", 50, 50, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
 		if(window != NULL) {
 			render = SDL_CreateRenderer(window, -1, 0);
 			if(render != NULL) {
